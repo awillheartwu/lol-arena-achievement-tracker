@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+  tracker:
+    image: lol-arena-tracker:latest
+    container_name: lol-arena-tracker
+    ports:
+      - "9435:80"
+    restart: unless-stopped
