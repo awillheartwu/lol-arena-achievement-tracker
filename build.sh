@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# 读取 package.json 中的版本号
-VERSION=$(jq -r .version package.json)
+TAG=$(node -p "require('./package.json').version")
+echo "building with tag: $TAG"
 
 # 构建前端项目
 pnpm build
