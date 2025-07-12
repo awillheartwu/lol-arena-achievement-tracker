@@ -7,4 +7,4 @@ VERSION=$(jq -r .version package.json)
 pnpm build
 
 # 构建 Docker 镜像（版本号 & latest）
-sudo docker build -t lol-arena:$VERSION -t lol-arena:latest .
+sudo docker build -f docker/Dockerfile -t lol-arena:latest -t lol-arena:$TAG .
