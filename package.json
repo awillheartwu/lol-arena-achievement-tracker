@@ -9,7 +9,7 @@
     "preview": "vite preview",
     "cz": "cz",
     "release": "standard-version",
-    "release:push": "pnpm release && git push --follow-tags && git push"
+    "rp": "pnpm release && git push --follow-tags && git push"
   },
   "dependencies": {
     "vue": "^3.5.17"
