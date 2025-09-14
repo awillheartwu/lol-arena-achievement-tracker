@@ -1,9 +1,16 @@
 version: "3"
 
+networks:
+  core-net:
+    external: true   # 如果你已经有 core-net，就 external:true；没有的话先在 nginx 那边创建
+
 services:
   tracker:
     image: lol-arena:latest
     container_name: lol-arena
-    ports:
-      - "9435:80"
+    # 1) 不再暴露宿主机端口
+    # ports:
+    #   - "9435:80"
     restart: unless-stopped
+    networks:
+      - core-net
