@@ -8,6 +8,9 @@ COPY docker/nginx.conf /etc/nginx/conf.d/default.conf
 # 拷贝打包后的前端文件到 nginx 的 web 目录
 COPY dist /usr/share/nginx/html
 
+# 修复权限
+RUN chmod -R 755 /usr/share/nginx/html
+
 # 暴露端口（默认 80）
 EXPOSE 80
 
