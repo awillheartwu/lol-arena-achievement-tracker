@@ -9,8 +9,8 @@ services:
     image: lol-arena:latest
     container_name: lol-arena
     # 1) 不再暴露宿主机端口
-    # ports:
-    #   - "9435:80"
+    ports:
+      - "9435:80"
     restart: unless-stopped
     networks:
       - core-net
